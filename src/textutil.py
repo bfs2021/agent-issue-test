@@ -10,4 +10,4 @@ def truncate(text, limit):
     """Shorten text to limit characters, appending an ellipsis when cut."""
     if len(text) <= limit:
         return text
-    return text[:limit]
+    return text[:limit] + "..."
