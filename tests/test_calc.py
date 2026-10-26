@@ -17,6 +17,10 @@ class CalcTests(unittest.TestCase):
     def test_mean(self):
         self.assertEqual(mean([1, 2, 3]), 2)
 
+    def test_mean_empty_raises(self):
+        with self.assertRaisesRegex(ValueError, r"mean\(\) requires at least one value"):
+            mean([])
+
 
 if __name__ == "__main__":
     unittest.main()
